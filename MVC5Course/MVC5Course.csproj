@@ -394,6 +394,7 @@
     <Content Include="Views\CRUD\Index.cshtml" />
     <Content Include="Views\CRUD\Details.cshtml" />
     <Content Include="Views\CRUD\Create.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

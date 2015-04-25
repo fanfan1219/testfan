@@ -36,6 +36,10 @@ namespace MVC5Course.Controllers
 
         public ActionResult Cart()
         {
+            //var vr = new ViewResult();
+            //vr.ViewName = "Cart";
+            //return vr;
+
             return View();
         }
 

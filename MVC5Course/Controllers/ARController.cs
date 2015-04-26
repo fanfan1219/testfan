@@ -62,5 +62,11 @@ namespace MVC5Course.Controllers
             return File(content, "image/png", "File5.png");
         }
 
+        public ActionResult File6()
+        {
+            byte[] content = System.IO.File.ReadAllBytes(Server.MapPath("~/Content/Pic1.png"));
+
+            return File(content, "image/png", "File5.png");
+        }
     }
 }

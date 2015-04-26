@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MVC5Course.Controllers
 {
-    public class ARController : Controller
+    public class ARController : BaseController
     {
         public ActionResult Index()
         {
@@ -62,11 +62,13 @@ namespace MVC5Course.Controllers
             return File(content, "image/png", "File5.png");
         }
 
-        public ActionResult File6()
+        public ActionResult Json1()
         {
-            byte[] content = System.IO.File.ReadAllBytes(Server.MapPath("~/Content/Pic1.png"));
+            db.Configuration.LazyLoadingEnabled = false;
 
-            return File(content, "image/png", "File5.png");
+            var data = db.Product.Take(10);
+
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
     }
 }
